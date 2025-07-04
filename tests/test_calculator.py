@@ -13,7 +13,7 @@ def test_add(a, b, expected):
 @pytest.mark.parametrize("a, b, expected", [
     (10, 5, 5),
     (0, 0, 0),
-    (-1, -1, -2),
+    (-1, 1, -2),
 ])
 
 def test_subtract(a, b, expected):
