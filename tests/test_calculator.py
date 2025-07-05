@@ -1,5 +1,7 @@
+from os.path import extsep
+
 import pytest
-from calculator import add, subtract, multiply, divide
+from calculator import add, subtract, multiply, divide, power
 
 @pytest.mark.parametrize("a, b, expected", [
     (1, 2, 3),
@@ -40,3 +42,12 @@ def test_divide(a, b, expected):
 def test_divide_zero():
     with pytest.raises(ValueError):
         divide(1, 0)
+
+@pytest.mark.parametrize("a, b, expected", [
+    (2,2,4),
+    (3,2,9),
+    (3,3,27),
+])
+
+def test_power(a,b, expected):
+    assert power(a, b) == expected
