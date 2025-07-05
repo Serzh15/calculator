@@ -47,6 +47,9 @@ def test_divide_zero():
     (2,2,4),
     (3,2,9),
     (3,3,27),
+    (5,0,1),
+    (2,-1,0.5),
+    (9.0,0.5,3.0),
 ])
 
 def test_power(a,b, expected):
