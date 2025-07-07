@@ -40,7 +40,7 @@ def test_divide(a, b, expected):
     assert divide(a, b) == expected
 
 def test_divide_zero():
-    with pytest.raises(ValueError):
+    with pytest.raises(ZeroDivisionError):
         divide(1, 0)
 
 @pytest.mark.parametrize("a, b, expected", [
