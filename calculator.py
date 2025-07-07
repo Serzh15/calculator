@@ -9,7 +9,7 @@ def multiply(a, b):
 
 def divide(a, b):
     if b == 0:
-        raise ValueError("Division by zero")
+        raise ZeroDivisionError("Division by zero")
     return a / b
 
 def power(a, b):
