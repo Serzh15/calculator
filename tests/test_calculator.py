@@ -1,7 +1,7 @@
 from os.path import extsep
 
 import pytest
-from calculator import add, subtract, multiply, divide, power
+from calculator import add, subtract, multiply, divide, power, modulo
 
 @pytest.mark.parametrize("a, b, expected", [
     (1, 2, 3),
@@ -52,5 +52,14 @@ def test_divide_zero():
     (9.0,0.5,3.0),
 ])
 
-def test_power(a,b, expected):
+def test_power(a, b, expected):
     assert power(a, b) == expected
+
+@pytest.mark.parametrize("a, b, expected", [
+    (10,3,1),
+    (5,5,0),
+    (9,2,1),
+])
+
+def test_modulo(a, b, expected):
+    assert modulo(a,b) == expected

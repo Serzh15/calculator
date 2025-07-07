@@ -16,3 +16,6 @@ def power(a, b):
     if not(isinstance(a,(int, float)) and isinstance(b,(int, float))):
         raise TypeError("Arguments have to be numbers")
     return a ** b
+
+def modulo(a, b):
+    return a / b
