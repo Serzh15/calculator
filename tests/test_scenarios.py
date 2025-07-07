@@ -1,3 +1,4 @@
+import pytest
 from calculator import add, multiply, subtract, power, divide
 
 def test_complex_expression():
@@ -10,8 +11,8 @@ def test_complex_expression():
     assert result == -5
 
 def test_complex_exp_fail():
-    result = add(
-        multiply(2,4), 2
-    ), divide(5,0),
-    subtract(1,1)
-    assert result == ValueError("Divide by zero")
+    with pytest.raises(ZeroDivisionError):
+        result = subtract(
+            add(multiply(2,4), divide(5,0)),
+            1
+        )
