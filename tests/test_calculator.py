@@ -62,4 +62,4 @@ def test_power(a, b, expected):
 ])
 
 def test_modulo(a, b, expected):
-    assert modulo(a,b) == expected
+    assert modulo(a, b) == expected
